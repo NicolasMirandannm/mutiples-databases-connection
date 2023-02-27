@@ -1,0 +1,17 @@
+version: '3.7'
+
+volumes:
+  data:
+
+services:
+  chat_in_real_time:
+    container_name: atendimento_teste
+    image: "postgres:latest"
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: atendimento_teste
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+
